@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Correos.cl tracking directo",
+  "short_name": "CorreosTrack",
+  "description": "Añade enlace a correos.cl con el número de tracking directo para ver estado en Correos de Chile (si existe).",
+  "version": "1.0.0",
+  "author": "Esteban Cuevas",
+  "homepage_url": "http://www.attitude.cl",
+  "icons": {
+          "16": "images/icon16.png",
+          "48": "images/icon48.png",
+          "128": "images/icon128.png",
+          "256": "images/icon256.png"
+  },
+  "content_scripts": [
+      {
+          "matches": ["*://*.ebay.com/*PurchaseHistory*", "*://*.ebay.com/*FetchOrderDetails*"],
+          "js": ["scripts/jquery-2.1.1.min.js", "scripts/correoscl.js"],
+          "run_at": "document_end",
+          "all_frames": true
+      }
+  ],
+  "permissions": [
+    "*://*.ebay.com/*"
+  ]
+}
