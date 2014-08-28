@@ -1,15 +1,27 @@
 Correos.cl Tracking Directo
 ===============
 
-Una extensión para Chrome que añade un enlace directo para consultar el estado del envío en correos.cl de un item comprado en eBay
+Una extensión para Chrome que añade un enlace directo para consultar el estado del envío en correos.cl de un item comprado en: eBay.com, Aliexpress.com
 
 ## Instalación
-Desde la tienda de aplicaciones de Chrome https://chrome.google.com/webstore/detail/correoscl-tracking-direct/johekollalobelgdfklhkpebigbbelaf
+Desde la tienda de aplicaciones de Chrome:
+
+https://chrome.google.com/webstore/detail/correoscl-tracking-direct/johekollalobelgdfklhkpebigbbelaf
 
 ## Uso
 Revisa tu historial de compras, o la orden de un pedido especifico. El enlace aparecerá al lado del tracking :)
 
 ![](http://i.imgur.com/9b793ar.png)
+
+## Cambios
+v1.0.1 (2014-08-28!):
+
+- Añadido Aliexpress.com. Gracias [@Tintolio](https://twitter.com/Tintolio)!
+
+v1.0.0 (2014-08-28):
+
+- Lanzamiento. Solo compatible con eBay.com
+
 
 ## Licencia
 

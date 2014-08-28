@@ -1,9 +1,8 @@
 {
   "manifest_version": 2,
-
   "name": "Correos.cl tracking directo",
   "short_name": "CorreosTrack",
-  "description": "Añade enlace a correos.cl (*) con el número de tracking directo para ver estado en Correos de Chile (si existe). (*) En eBay y Aliexpress",
+  "description": "Añade enlace a Correos.cl con el número de tracking directo para ver estado en Correos de Chile.",
   "version": "1.0.1",
   "author": "Esteban Cuevas",
   "homepage_url": "http://www.attitude.cl",
