@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Correos.cl tracking directo",
+  "name": "Correos.cl tracking fácil",
   "short_name": "CorreosTrack",
-  "description": "Añade enlace a Correos.cl con el número de tracking directo para ver estado en Correos de Chile.",
-  "version": "1.0.1",
+  "description": "Añade enlace a Correos.cl con el número de tracking directo para ver estado en Correos de Chile de forma fácil y rápida",
+  "version": "1.0.2",
   "author": "Esteban Cuevas",
   "homepage_url": "http://www.attitude.cl",
   "icons": {
