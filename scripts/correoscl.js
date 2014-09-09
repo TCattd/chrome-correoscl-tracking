@@ -2,7 +2,6 @@
 esteban@attitude.cl
 Copyright under The MIT License (MIT) http://opensource.org/licenses/MIT
  */
-
 jQuery.noConflict();
 
 jQuery( document ).ready(function( $ ) {
@@ -14,16 +13,17 @@ jQuery( document ).ready(function( $ ) {
     if(currentDomain.indexOf('ebay.com') > -1) {
         //Tracking number en el historial de compras
         //.tracking-label>a.iframe-modal
-        if(currentPath.indexOf('PurchaseHistory') > -1) {
+        if(currentPath.indexOf('eBayISAPI') > -1) {
             var trackingLoopPurchaseHistory = setInterval(function(){
-                $('.tracking-label>a[title="Tracking number"]').each(function(){
-                    var trackingNumber = $(this).text();
-                    var trackingNext   = $(this).next('.seguimientoCorreos').attr('data-tracking');
+                $("div[id^='track_']").each(function() {
+                    var trackingNumber = $(this).children('.g-v33:eq(1)').text().trim();
+                    var trackingNext   = $(this).next('.seguimientowrap').attr('data-tracking');
+                    $(this).children('.g-v33:eq(1)').next('a').attr('data-tracking', trackingNumber);
 
                     //if(!$('#seguimientoCorreos_'+trackingNumber).length) { //Dos envios con el mismo número, evitan que se cree uno nuevo al lado de cada número de tracking con esta condición
                     //Si el número de tracking que encontramos a continuación no es el trackign de este loop, entonces creamos el link
-                    if(trackingNext != trackingNumber) {
-                        $(this).after(' // <a href="http://www.correos.cl/SitePages/seguimiento/seguimiento.aspx?envio='+trackingNumber+'" class="seguimientoCorreos" id="seguimientoCorreos_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank">Seguimiento en Correos.cl</a>');
+                    if(trackingNext != trackingNumber && trackingNumber != '--') {
+                        $(this).after(' <div class="seguimientowrap" data-tracking="'+trackingNumber+'"><a href="http://www.correos.cl/SitePages/seguimiento/seguimiento.aspx?envio='+trackingNumber+'" class="seguimientoCorreos" id="seguimientoCorreos_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank">Seguimiento en Correos.cl</a></div>');
                     }
                 });
             }, 1000);

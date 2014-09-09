@@ -15,7 +15,7 @@
   "content_scripts": [
       {
           "matches": [
-                "*://*.ebay.com/*PurchaseHistory*",
+                "*://*.ebay.com/*ws/eBayISAPI*",
                 "*://*.ebay.com/*FetchOrderDetails*",
                 "*://*.aliexpress.com/*order_detail*"
           ],
