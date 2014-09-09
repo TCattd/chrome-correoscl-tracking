@@ -3,7 +3,7 @@
   "name": "Correos.cl tracking fácil",
   "short_name": "CorreosTrack",
   "description": "Añade enlace a Correos.cl con el número de tracking directo para ver estado en Correos de Chile de forma fácil y rápida",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Esteban Cuevas",
   "homepage_url": "http://www.attitude.cl",
   "icons": {
