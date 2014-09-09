@@ -13,7 +13,11 @@ Revisa tu historial de compras, o la orden de un pedido especifico. El enlace ap
 
 ![](http://i.imgur.com/9b793ar.png)
 
-## Cambios
+## Changelog
+v1.0.3 (2014-09-09):
+
+- Arreglado tracking en eBay. Este último cambió el markup de su html en el historial de pedidos.
+
 v1.0.1 (2014-08-28!):
 
 - Añadido Aliexpress.com. Gracias [@Tintolio](https://twitter.com/Tintolio)!
