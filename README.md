@@ -6,7 +6,7 @@ Una extensión para Chrome que añade un enlace directo para consultar el estado
 ## Instalación
 Desde la tienda de aplicaciones de Chrome:
 
-https://chrome.google.com/webstore/detail/correoscl-tracking-direct/johekollalobelgdfklhkpebigbbelaf
+http://go.attitude.cl/trackingfacil
 
 ## Uso
 Revisa tu historial de compras, o la orden de un pedido especifico. El enlace aparecerá al lado del tracking :)
