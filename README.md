@@ -1,4 +1,4 @@
-Correos.cl Tracking Directo
+Tracking Fácil
 ===============
 
 Una extensión para Chrome que añade un enlace directo para consultar el estado del envío en correos.cl de un item comprado en: eBay.com, Aliexpress.com
