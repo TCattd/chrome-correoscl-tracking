@@ -18,7 +18,7 @@ v1.0.5 (2014-09-10):
 
 - Arreglado tracking en eBay, de nuevo.
 
-- Añadido arreglo para tracking en adidas.cl, ahora apunta correctamente a Chilexpress.
+- Añadido arreglo para tracking en adidas.cl, ahora apunta correctamente a Chilexpress. Gracias [@Geravial](https://twitter.com/Geravial)!
 
 v1.0.3 (2014-09-09):
 
