@@ -14,6 +14,12 @@ Revisa tu historial de compras, o la orden de un pedido especifico. El enlace ap
 ![](http://i.imgur.com/9b793ar.png)
 
 ## Changelog
+v1.0.4 (2014-09-10):
+
+- Arreglado tracking en eBay, de nuevo.
+
+- Probando tracking en adidas.cl (feedback requerido).
+
 v1.0.3 (2014-09-09):
 
 - Arreglado tracking en eBay. Este último cambió el markup de su html en el historial de pedidos.
