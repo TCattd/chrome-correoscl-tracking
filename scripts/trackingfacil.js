@@ -89,23 +89,17 @@ jQuery( document ).ready(function( $ ) {
 
     //Adidas.cl
     if(currentDomain.indexOf('adidas.cl') > -1) {
-        console.log('en Adidas');
         //Tracking en el historial de compras
-        if(currentPath.indexOf('Order-Histor') > -1) {
-            console.log('en el Historial');
-            var trackingAdidasPurchaseHistory = setInterval(function(){
-                $('.ordernum').each(function(){
-                    var trackingNumber = $(this).text();
-                    console.log(trackingNumber);
-                    var trackingNext   = $(this).next('.seguimientoChilexp').attr('data-tracking');
-                    console.log(trackingNext);
+        if(currentPath.indexOf('Order-History') > -1) {
+            var badLink = $('.statuscolumn>p:eq(1)').children("a[href*='chilexpress']").addClass('trackingChilexp').attr('href');
 
-                    //Si el número de tracking que encontramos a continuación no es el trackign de este loop, entonces creamos el link
-                    if(trackingNext != trackingNumber && trackingNumber != '') {
-                        $(this).after('<br/><a href="https://www.chilexpress.cl/Views/ChilexpressCL/Resultado-busqueda.aspx?DATA='+trackingNumber+'" class="seguimientoChilexp" id="seguimientoChilexp_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank">Seguimiento Chilexpress.cl</a>');
-                    }
-                });
-            }, 1000);
+            if(typeof badLink != 'undefined') {
+                console.log('fixing link');
+                var trackId = badLink.replace('http://www.chilexpress.cl/rastreo.asp?accion=carga_datos_generales_ot&numot=', '');
+                var properLink = 'https://www.chilexpress.cl/Views/ChilexpressCL/Resultado-busqueda.aspx?DATA='+trackId;
+
+                $('.trackingChilexp').attr('href', properLink);
+            }
         }
     }
 });
