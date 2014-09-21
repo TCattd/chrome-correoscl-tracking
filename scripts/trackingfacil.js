@@ -36,6 +36,9 @@ jQuery( document ).ready(function( $ ) {
                     var trackingNumber = $(this).text();
                     var trackingNext   = $(this).next('.seguimientoCorreos').attr('data-tracking');
 
+                    //Fix Tracking Number
+                    trackingNumber = trackingNumber.replace('Tracking number', '');
+
                     //if(!$('#seguimientoCorreos_'+trackingNumber).length) { //Dos envios con el mismo número, evitan que se cree uno nuevo al lado de cada número de tracking con esta condición
                     //Si el número de tracking que encontramos a continuación no es el trackign de este loop, entonces creamos el link
                     if(trackingNext != trackingNumber) {
@@ -52,6 +55,9 @@ jQuery( document ).ready(function( $ ) {
                 $('span[data-ng-show*="package.deliveryInfo.trackingNumber"]').each(function(){
                     var trackingNumber = $(this).text();
                     var trackingNext   = $(this).next('.seguimientoCorreos').attr('data-tracking');
+
+                    //Fix Tracking Number
+                    trackingNumber = trackingNumber.replace('Tracking number', '');
 
                     if(!$('#seguimientoCorreos_'+trackingNumber).length) {
                         $(this).after(' // <a href="http://www.correos.cl/SitePages/seguimiento/seguimiento.aspx?envio='+trackingNumber+'" class="seguimientoCorreos" id="seguimientoCorreos_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank">Seguimiento en Correos.cl</a>');
