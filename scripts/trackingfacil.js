@@ -32,12 +32,13 @@ jQuery( document ).ready(function( $ ) {
         //.tracking-label>a.iframe-modal
         if(currentPath.indexOf('PurchaseHistory') > -1) {
             var trackingLoopPurchaseHistory = setInterval(function(){
-                $('.tracking-label>a[title="Tracking number"]').each(function(){
+                $('.tracking-label>a.iframe-modal').each(function(){
                     var trackingNumber = $(this).text();
                     var trackingNext   = $(this).next('.seguimientoCorreos').attr('data-tracking');
 
                     //Fix Tracking Number
                     trackingNumber = trackingNumber.replace('Tracking number', '');
+                    trackingNumber = trackingNumber.replace('Número de seguimiento', '');
 
                     //if(!$('#seguimientoCorreos_'+trackingNumber).length) { //Dos envios con el mismo número, evitan que se cree uno nuevo al lado de cada número de tracking con esta condición
                     //Si el número de tracking que encontramos a continuación no es el trackign de este loop, entonces creamos el link

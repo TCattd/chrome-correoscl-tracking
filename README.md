@@ -14,6 +14,10 @@ Revisa tu historial de compras, o la orden de un pedido especifico. El enlace ap
 ![](http://i.imgur.com/9b793ar.png)
 
 ## Changelog
+v1.0.7 (2015-04-13):
+
+- Arreglado tracking en eBay. Cambio de markup.
+
 v1.0.6 (2014-09-21):
 
 - Arreglado tracking en eBay. Cambio de markup, de nuevo.
