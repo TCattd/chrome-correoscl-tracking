@@ -3,7 +3,7 @@
   "name": "Tracking fácil",
   "short_name": "CorreosTrack",
   "description": "Añade enlace a Correos/Chilexpress con el número de tracking directo para ver estado de envio de forma fácil y rápida",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Esteban Cuevas",
   "homepage_url": "http://www.attitude.cl",
   "icons": {
@@ -18,8 +18,7 @@
                 "*://*.ebay.com/*eBayISAPI*",
                 "*://*.ebay.com/*PurchaseHistory*",
                 "*://*.ebay.com/*FetchOrderDetails*",
-                "*://*.aliexpress.com/*order_detail*",
-                "*://*.adidas.cl/*Order-History*"
+                "*://*.aliexpress.com/*order_detail*"
           ],
           "js": ["scripts/jquery-2.1.1.min.js", "scripts/trackingfacil.js"],
           "run_at": "document_end",
@@ -28,7 +27,6 @@
   ],
   "permissions": [
     "*://*.ebay.com/*",
-    "*://*.aliexpress.com/*",
-    "*://*.adidas.cl/*"
+    "*://*.aliexpress.com/*"
   ]
 }

@@ -93,19 +93,4 @@ jQuery( document ).ready(function( $ ) {
             }
         }
     }
-
-    //Adidas.cl
-    if(currentDomain.indexOf('adidas.cl') > -1) {
-        //Tracking en el historial de compras
-        if(currentPath.indexOf('Order-History') > -1) {
-            var badLink = $('.statuscolumn>p:eq(1)').children("a[href*='chilexpress']").addClass('trackingChilexp').attr('href');
-
-            if(typeof badLink != 'undefined') {
-                var trackId = badLink.replace('http://www.chilexpress.cl/rastreo.asp?accion=carga_datos_generales_ot&numot=', '');
-                var properLink = 'https://www.chilexpress.cl/Views/ChilexpressCL/Resultado-busqueda.aspx?DATA='+trackId;
-
-                $('.trackingChilexp').attr('href', properLink).text('Seguimiento Chilexpress');
-            }
-        }
-    }
 });
