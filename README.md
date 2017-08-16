@@ -11,7 +11,7 @@ http://go.attitude.cl/trackingfacil
 ## Uso
 Revisa tu historial de compras, o la orden de un pedido especifico. El enlace aparecerá al lado del tracking :)
 
-![](http://i.imgur.com/9b793ar.png)
+![eBay demo](https://raw.githubusercontent.com/TCattd/chrome-correoscl-tracking/master/extras-dontpackage/pantallazo1.png)
 
 ## Changelog
 v1.1.0 (2017-08-16):
