@@ -1,7 +1,7 @@
 Tracking Fácil
 ===============
 
-Una extensión para Chrome que añade un enlace directo para consultar el estado del envío en correos.cl de un item comprado en: eBay.com, Aliexpress.com
+Una extensión para Chrome que añade un enlace directo para consultar el estado del envío en correos.cl de un item comprado en: eBay.com, AliExpress.com
 
 ## Instalación
 Desde la tienda de aplicaciones de Chrome:
@@ -14,6 +14,10 @@ Revisa tu historial de compras, o la orden de un pedido especifico. El enlace ap
 ![](http://i.imgur.com/9b793ar.png)
 
 ## Changelog
+v1.1.0 (2017-08-16):
+
+- Aplicado el formato de seguimiento nuevo de Correos de Chile para los envíos en AliExpress que usen el método de envío AliExpress Standard Shipping, [explicado en mail de Correos](http://webview.masterbase.com/v0/CORREOSMKTCL/ID1048hx406222icXse85). Ahora se puede verificar el estado de esos envíos una vez que ingresan al país (por convenio Correos de Chile con Sinotrans).
+
 v1.0.8 (2015-08-20):
 
 - Removido adidas.cl (no tengo como verificar si aún funciona, lo siento).
@@ -38,7 +42,7 @@ v1.0.3 (2014-09-09):
 
 v1.0.1 (2014-08-28!):
 
-- Añadido Aliexpress.com. Gracias [@Tintolio](https://twitter.com/Tintolio)!
+- Añadido AliExpress.com. Gracias [@Tintolio](https://twitter.com/Tintolio)!
 
 v1.0.0 (2014-08-28):
 

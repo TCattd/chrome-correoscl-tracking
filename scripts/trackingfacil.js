@@ -68,27 +68,47 @@ jQuery( document ).ready(function( $ ) {
         }
     }
 
-    //Aliexpress
+    //AliExpress
     if(currentDomain.indexOf('aliexpress.com') > -1) {
         //Tracking number en los detalles de la orden de compra
         //.shipping-bd>.no
         if(currentPath.indexOf('order_detail') > -1) {
             var trackingNumber = $('.shipping-bd>.no').text();
-            var sentThrough    = $('.logistics-name:first').text().toLowerCase();
+            var logisticsName  = $('.logistics-name:first').text().toLowerCase();
 
             //Solo correos.cl, NO si:
-            //.logistics-name = dhl, fedex, tnt, ups
-            if(sentThrough.indexOf('dhl') == -1 && sentThrough.indexOf('fedex') == -1 && sentThrough.indexOf('tnt') == -1 && sentThrough.indexOf('ups') == -1) {
+            //.logistics-name = dhl, fedex, tnt, ups, aliexpress standard shipping
+            if(logisticsName.indexOf('dhl') == -1 && logisticsName.indexOf('fedex') == -1 && logisticsName.indexOf('tnt') == -1 && logisticsName.indexOf('ups') == -1 && logisticsName.indexOf('aliexpress standard shipping') == -1) {
                 $('.shipping-bd>.no').html(trackingNumber+'<br/><a href="http://www.correos.cl/SitePages/seguimiento/seguimiento.aspx?envio='+trackingNumber+'" class="seguimientoCorreos" id="seguimientoCorreos_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank">Seguimiento en Correos.cl</a>');
             }
 
+            //AliExpress Standard Shipping
+            if(logisticsName.indexOf('aliexpress standard shipping') > -1) {
+                trackingNumberForCorreos = trackingNumber.toString().trim();
+
+                if (trackingNumber.match(/^\d/)) {
+                    //Begins with a number, let's apply Correos's formatting
+                    //Remove the last three chars, then keep the last 12 digits (not including the three we just removed)
+
+                    trackingNumberForCorreos = trackingNumberForCorreos.slice(0, -3); //remove the last three chars
+
+                    //trackingNumberForCorreos = trackingNumberForCorreos.substr(trackingNumberForCorreos.length - 13); //keep the last 12 chars
+
+                    trackingNumberForCorreos = trackingNumberForCorreos.slice(11); //keep the last 12 chars
+                }
+
+                trackingNumberForCorreos = trackingNumberForCorreos.trim().replace(/ +/g, '').replace(/(\r\n|\n|\r)/gm, '');
+
+                $('.shipping-bd>.no').html(trackingNumber+'<br/><a href="http://www.correos.cl/SitePages/seguimiento/seguimiento.aspx?envio='+trackingNumberForCorreos+'" class="seguimientoCorreos" id="seguimientoCorreos_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank" title="'+trackingNumberForCorreos+'">Seguimiento en Correos.cl</a>');
+            }
+
             //DHL
-            if(sentThrough.indexOf('dhl') > -1) {
+            if(logisticsName.indexOf('dhl') > -1) {
                 $('.shipping-bd>.no').html(trackingNumber+'<br/><a href="http://www.dhl.cl/content/cl/es/express/rastreo.shtml?brand=DHL&AWB='+trackingNumber+'" class="seguimientoCorreos" id="seguimientoCorreos_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank">Seguimiento en DHL.cl</a>');
             }
 
             //FedEx
-            if(sentThrough.indexOf('fedex') > -1) {
+            if(logisticsName.indexOf('fedex') > -1) {
                 $('.shipping-bd>.no').html(trackingNumber+'<br/><a href="http://www.fedex.com/fedextrack/html/index.html?tracknumbers='+trackingNumber+'" class="seguimientoCorreos" id="seguimientoCorreos_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank">Seguimiento en FedEx.com</a>');
             }
         }
