@@ -14,6 +14,10 @@ Revisa tu historial de compras, o la orden de un pedido especifico. El enlace ap
 ![eBay demo](https://raw.githubusercontent.com/TCattd/chrome-correoscl-tracking/master/extras-dontpackage/pantallazo1.png)
 
 ## Changelog
+v1.1.1 (2017-08-18):
+
+- Añadido input para copiar-pegar rápidamente los códigos de AliExpress Standard Shipping.
+
 v1.1.0 (2017-08-16):
 
 - Aplicado el formato de seguimiento nuevo de Correos de Chile para los envíos en AliExpress que usen el método de envío AliExpress Standard Shipping, [explicado en mail de Correos](http://webview.masterbase.com/v0/CORREOSMKTCL/ID1048hx406222icXse85). Ahora se puede verificar el estado de esos envíos una vez que ingresan al país (por convenio Correos de Chile con Sinotrans).

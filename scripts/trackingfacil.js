@@ -79,14 +79,14 @@ jQuery( document ).ready(function( $ ) {
             //Solo correos.cl, NO si:
             //.logistics-name = dhl, fedex, tnt, ups, aliexpress standard shipping
             if(logisticsName.indexOf('dhl') == -1 && logisticsName.indexOf('fedex') == -1 && logisticsName.indexOf('tnt') == -1 && logisticsName.indexOf('ups') == -1 && logisticsName.indexOf('aliexpress standard shipping') == -1) {
-                $('.shipping-bd>.no').html(trackingNumber+'<br/><a href="http://www.correos.cl/SitePages/seguimiento/seguimiento.aspx?envio='+trackingNumber+'" class="seguimientoCorreos" id="seguimientoCorreos_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank">Seguimiento en Correos.cl</a>');
+                $('.shipping-bd>.no').html(trackingNumber+'<br/><hr/><a href="http://www.correos.cl/SitePages/seguimiento/seguimiento.aspx?envio='+trackingNumber+'" class="seguimientoCorreos" id="seguimientoCorreos_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank">Seguimiento en Correos.cl</a>');
             }
 
             //AliExpress Standard Shipping
             if(logisticsName.indexOf('aliexpress standard shipping') > -1) {
-                trackingNumberForCorreos = trackingNumber.toString().trim();
+                var trackingNumberForCorreos = trackingNumber.toString().trim();
 
-                if (trackingNumber.match(/^\d/)) {
+                if (trackingNumberForCorreos.match(/^\d/)) {
                     //Begins with a number, let's apply Correos's formatting
                     //Remove the last three chars, then keep the last 12 digits (not including the three we just removed)
 
@@ -97,19 +97,21 @@ jQuery( document ).ready(function( $ ) {
                     trackingNumberForCorreos = trackingNumberForCorreos.slice(11); //keep the last 12 chars
                 }
 
+                var trackingCodInput = 'Cod: <input onClick="this.select();" style="width: 70%;"value="'+trackingNumberForCorreos+'" /><br/><hr/>';
+
                 trackingNumberForCorreos = trackingNumberForCorreos.trim().replace(/ +/g, '').replace(/(\r\n|\n|\r)/gm, '');
 
-                $('.shipping-bd>.no').html(trackingNumber+'<br/><a href="http://www.correos.cl/SitePages/seguimiento/seguimiento.aspx?envio='+trackingNumberForCorreos+'" class="seguimientoCorreos" id="seguimientoCorreos_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank" title="'+trackingNumberForCorreos+'">Seguimiento en Correos.cl</a>');
+                $('.shipping-bd>.no').html(trackingNumber+'<br/><hr/>'+trackingCodInput+'<a href="http://www.correos.cl/SitePages/seguimiento/seguimiento.aspx?envio='+trackingNumberForCorreos+'" class="seguimientoCorreos" id="seguimientoCorreos_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank" title="'+trackingNumberForCorreos+'">Seguimiento en Correos.cl</a>');
             }
 
             //DHL
             if(logisticsName.indexOf('dhl') > -1) {
-                $('.shipping-bd>.no').html(trackingNumber+'<br/><a href="http://www.dhl.cl/content/cl/es/express/rastreo.shtml?brand=DHL&AWB='+trackingNumber+'" class="seguimientoCorreos" id="seguimientoCorreos_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank">Seguimiento en DHL.cl</a>');
+                $('.shipping-bd>.no').html(trackingNumber+'<br/><hr/><a href="http://www.dhl.cl/content/cl/es/express/rastreo.shtml?brand=DHL&AWB='+trackingNumber+'" class="seguimientoCorreos" id="seguimientoCorreos_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank">Seguimiento en DHL.cl</a>');
             }
 
             //FedEx
             if(logisticsName.indexOf('fedex') > -1) {
-                $('.shipping-bd>.no').html(trackingNumber+'<br/><a href="http://www.fedex.com/fedextrack/html/index.html?tracknumbers='+trackingNumber+'" class="seguimientoCorreos" id="seguimientoCorreos_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank">Seguimiento en FedEx.com</a>');
+                $('.shipping-bd>.no').html(trackingNumber+'<br/><hr/><a href="http://www.fedex.com/fedextrack/html/index.html?tracknumbers='+trackingNumber+'" class="seguimientoCorreos" id="seguimientoCorreos_'+trackingNumber+'" data-tracking="'+trackingNumber+'" target="_blank">Seguimiento en FedEx.com</a>');
             }
         }
     }
