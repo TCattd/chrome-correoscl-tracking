@@ -3,7 +3,7 @@
   "name": "Tracking fácil",
   "short_name": "CorreosTrack",
   "description": "Añade enlace a Correos/Chilexpress con el número de tracking directo para ver estado de envio de forma fácil y rápida",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "Esteban Cuevas",
   "homepage_url": "http://actitud.xyz",
   "icons": {

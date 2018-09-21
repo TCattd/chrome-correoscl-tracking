@@ -14,6 +14,10 @@ Revisa tu historial de compras, o la orden de un pedido especifico. El enlace ap
 ![eBay demo](https://raw.githubusercontent.com/TCattd/chrome-correoscl-tracking/master/extras-dontpackage/pantallazo1.png)
 
 ## Changelog
+v1.1.2 (2019-09-21):
+
+- Corregido enlace a Correos de Chile por forzado SSL (HTTPS) en correos.cl
+
 v1.1.1 (2017-08-18):
 
 - Añadido input para copiar-pegar rápidamente los códigos de AliExpress Standard Shipping.
