@@ -24,7 +24,7 @@ v1.1.1 (2017-08-18):
 
 v1.1.0 (2017-08-16):
 
-- Aplicado el formato de seguimiento nuevo de Correos de Chile para los envíos en AliExpress que usen el método de envío AliExpress Standard Shipping, [explicado en mail de Correos](http://webview.masterbase.com/v0/CORREOSMKTCL/ID1048hx406222icXse85). Ahora se puede verificar el estado de esos envíos una vez que ingresan al país (por convenio Correos de Chile con Sinotrans).
+- Aplicado el formato de seguimiento nuevo de Correos de Chile para los envíos en AliExpress que usen el método de envío AliExpress Standard Shipping, [explicado en mail de Correos](https://www.correos.cl/SitePages/direccion-aliexpress/tips/Default.aspx). Ahora se puede verificar el estado de esos envíos una vez que ingresan al país (por convenio Correos de Chile con Sinotrans).
 
 v1.0.8 (2015-08-20):
 
