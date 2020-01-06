@@ -14,6 +14,10 @@ Revisa tu historial de compras, o la orden de un pedido especifico. El enlace ap
 ![eBay demo](https://raw.githubusercontent.com/TCattd/chrome-correoscl-tracking/master/extras-dontpackage/pantallazo1.png)
 
 ## Changelog
+v1.1.3 (2020-01-06):
+
+- Corregido enlace a Correos de Chile. Nueva URL.
+
 v1.1.2 (2018-09-21):
 
 - Corregido enlace a Correos de Chile por forzado SSL (HTTPS) en correos.cl
